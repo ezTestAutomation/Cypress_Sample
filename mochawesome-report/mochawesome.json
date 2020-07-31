@@ -1,0 +1,256 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2020-07-23T02:23:13.267Z",
+    "end": "2020-07-23T02:24:00.591Z",
+    "duration": 47324,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4c617144-aeb6-4dc7-8659-50959508f770",
+      "title": "",
+      "fullFile": "cypress\\integration\\TestSuites\\Commission.js",
+      "file": "cypress\\integration\\TestSuites\\Commission.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fd3f8af4-eeb2-42d8-bf37-05a53af6707f",
+          "title": "7319_Create successfully when inputting value into all fields",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login page and navigate to Commission then input value into all fields",
+              "fullTitle": "7319_Create successfully when inputting value into all fields Login page and navigate to Commission then input value into all fields",
+              "timedOut": null,
+              "duration": 15621,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "el_Login.visit_and_login_page(this.logins.baseURL, this.logins.username, this.logins.password);\nel_Login.verify_navigate_admin_name(this.logins.navAfterLogin);\nel_left_menu.click_category();\nel_left_menu.verify_hoa_hong_in_Category();\nel_left_menu.click_on_HoaHong();\nel_commission.click_on_commission();\nel_commission.verify_title_of_commission();\nvar name = cy.common.RandonString(10);\nel_commission.input_text_into_commission_name(name);\nvar number = cy.common.randNumber(12);\nel_commission.input_text_into_txt_max_amount_money(number);\nel_commission.click_on_save_button();\nel_commission.verify_message_notify_sucessful(name);\nel_commission.input_text_into_search_textbox(name);\nvar todaysDate = Cypress.moment().format('DD-MM-YYYY');\nel_commission.verify_commission_has_been_added_on_data_grid(\"DDBH\", name, \"\", \"\", number + \" ₫\", todaysDate, \"\", \"Đang hoạt động\");",
+              "err": {},
+              "uuid": "d0d81f92-4d4a-41a0-aa16-9df1d8df4854",
+              "parentUUID": "fd3f8af4-eeb2-42d8-bf37-05a53af6707f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d0d81f92-4d4a-41a0-aa16-9df1d8df4854"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15621,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "0a19a329-a5a8-4130-bfc0-ba8204f0e9fa",
+          "title": "7318_Create commission successfully when input value into required fields",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create commission successfully when input value into required fields",
+              "fullTitle": "7318_Create commission successfully when input value into required fields Create commission successfully when input value into required fields",
+              "timedOut": null,
+              "duration": 11539,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.visit(this.logins.baseUrl)\nel_Login.visit_and_login_page(this.logins.baseURL, this.logins.username, this.logins.password);\nel_Login.verify_navigate_admin_name(this.logins.navAfterLogin);\nel_left_menu.click_category();\nel_left_menu.verify_hoa_hong_in_Category();\nel_left_menu.click_on_HoaHong();\nel_commission.click_on_commission();\nel_commission.verify_title_of_commission();\nvar name = cy.common.RandonString(10);\nel_commission.input_text_into_commission_name(name);\nvar number = cy.common.randNumber(12);\nel_commission.input_text_into_txt_max_amount_money(number);\nel_commission.click_on_save_button();\nel_commission.verify_message_notify_sucessful(name);\nel_commission.input_text_into_search_textbox(name);\nvar todaysDate = Cypress.moment().format('DD-MM-YYYY');\nel_commission.verify_commission_has_been_added_on_data_grid(\"DDBH\", name, \"\", \"\", number + \" ₫\", todaysDate, \"\", \"Đang hoạt động\");",
+              "err": {},
+              "uuid": "76124eea-1c9f-42e2-b68e-34f8ecd4d832",
+              "parentUUID": "0a19a329-a5a8-4130-bfc0-ba8204f0e9fa",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "76124eea-1c9f-42e2-b68e-34f8ecd4d832"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11539,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "0df9f49f-5efc-4199-9b3e-87c32dea91cb",
+          "title": "7333_Creat commission unsucessfully when inputting empty value into required fields",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login page",
+              "fullTitle": "7333_Creat commission unsucessfully when inputting empty value into required fields Login page",
+              "timedOut": null,
+              "duration": 5199,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.visit(this.logins.baseUrl)\nel_Login.visit_and_login_page(this.logins.baseURL, this.logins.username, this.logins.password);\nel_Login.verify_navigate_admin_name(this.logins.navAfterLogin);\nel_left_menu.click_category();\nel_left_menu.verify_hoa_hong_in_Category();\nel_left_menu.click_on_HoaHong();\nel_commission.click_on_commission();\nel_commission.verify_title_of_commission();\nel_commission.input_text_into_txt_max_amount_money(\" \");\nel_commission.click_on_save_button();\nel_commission.verify_name_commission_validate_text_box(\"  Vui lòng nhập tên hoa hồng\");\nel_commission.verify_max_amount_validate_text_box(\"  Vui lòng nhập hạn mức tối đa\");",
+              "err": {},
+              "uuid": "6d9d947c-2170-4f5d-aa26-be507fd707d2",
+              "parentUUID": "0df9f49f-5efc-4199-9b3e-87c32dea91cb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6d9d947c-2170-4f5d-aa26-be507fd707d2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5199,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "9d1915e1-5436-4738-9f45-a575d96dfe6b",
+          "title": "7450_Create commission unsuccessfully when inputting empty value into max amount text box",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login page",
+              "fullTitle": "7450_Create commission unsuccessfully when inputting empty value into max amount text box Login page",
+              "timedOut": null,
+              "duration": 5143,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.visit(this.logins.baseUrl)\nel_Login.visit_and_login_page(this.logins.baseURL, this.logins.username, this.logins.password);\nel_Login.verify_navigate_admin_name(this.logins.navAfterLogin);\nel_left_menu.click_category();\nel_left_menu.verify_hoa_hong_in_Category();\nel_left_menu.click_on_HoaHong();\nel_commission.click_on_commission();\nel_commission.verify_title_of_commission();\nvar name = cy.common.RandonString(10);\nel_commission.input_text_into_commission_name(name);\nvar number = cy.common.randNumber(12);\nel_commission.input_text_into_txt_max_amount_money(number);\nel_commission.check_on_fixed_amount();\nel_commission.click_on_save_button();\nel_commission.verify_fixed_amount_validate_text_box(\"  Vui lòng nhập số tiền cố định\");",
+              "err": {},
+              "uuid": "defc4b86-4299-41f1-b6e5-27ec39e10be2",
+              "parentUUID": "9d1915e1-5436-4738-9f45-a575d96dfe6b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "defc4b86-4299-41f1-b6e5-27ec39e10be2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5143,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "d13b732e-149f-479f-9e67-b5e61c78f4ac",
+          "title": "7325_Create commission successfully when checking on apply for the sale present ",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login page",
+              "fullTitle": "7325_Create commission successfully when checking on apply for the sale present  Login page",
+              "timedOut": null,
+              "duration": 6458,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.visit(this.logins.baseUrl)\nel_Login.visit_and_login_page(this.logins.baseURL, this.logins.username, this.logins.password);\nel_Login.verify_navigate_admin_name(this.logins.navAfterLogin);\nel_left_menu.click_category();\nel_left_menu.verify_hoa_hong_in_Category();\nel_left_menu.click_on_HoaHong();\nel_commission.click_on_commission();\nel_commission.verify_title_of_commission();\nvar name = cy.common.RandonString(10);\nel_commission.input_text_into_commission_name(name);\nvar number = cy.common.randNumber(10);\nel_commission.input_text_into_txt_max_amount_money(number);\nel_commission.check_on_chk_apply_for_sale_present();\nel_commission.click_on_save_button();\nel_commission.verify_message_notify_sucessful(name);\nel_commission.input_text_into_search_textbox(name);\nvar todaysDate = Cypress.moment().format('DD-MM-YYYY');\nel_commission.verify_commission_has_been_added_on_data_grid(\"DDBH\", name, \"\", \"\", number + \" ₫\", todaysDate, \"\", \"Đang hoạt động\");",
+              "err": {},
+              "uuid": "4dd94e76-f67d-48b8-834a-67a93e1ce2e8",
+              "parentUUID": "d13b732e-149f-479f-9e67-b5e61c78f4ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4dd94e76-f67d-48b8-834a-67a93e1ce2e8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6458,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.1.0"
+    }
+  }
+}

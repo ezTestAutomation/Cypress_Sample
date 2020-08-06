@@ -12,6 +12,9 @@ describe("7319_Create successfully when inputting value into all fields",functio
         cy.fixture('LoginPage.json').then(logins => {
         this.logins = logins
       })
+      cy.fixture('Commission.json').then(com => {
+        this.com = com
+      })
     })
 
     it("Login page and navigate to Commission then input value into all fields", function(){
@@ -26,13 +29,13 @@ describe("7319_Create successfully when inputting value into all fields",functio
 
         var name = cy.common.RandonString(10)
         el_commission.input_text_into_commission_name(name)
-        const number = cy.common.randNumber(12)
-        el_commission.input_text_into_txt_max_amount_money(number)
+        // const number = cy.common.randNumber(12)
+        el_commission.input_text_into_txt_max_amount_money(this.com.TC7319.number)
         el_commission.click_on_save_button()
         el_commission.verify_message_notify_sucessful(name)
         el_commission.input_text_into_search_textbox(name)
         const todaysDate = Cypress.moment().format('DD-MM-YYYY')
-        el_commission.verify_commission_has_been_added_on_data_grid("DDBH", name, "", "", number+" ₫", todaysDate, "", "Đang hoạt động")
+        el_commission.verify_commission_has_been_added_on_data_grid("DDBH", name, "", "", this.com.TC7319.number +" ₫", todaysDate, "", "Đang hoạt động")
     })
     
 })
@@ -45,6 +48,10 @@ describe("7318_Create commission successfully when input value into required fie
     beforeEach(function(){
         cy.fixture('LoginPage.json').then(logins => {
         this.logins = logins
+      })
+
+      cy.fixture('Commission.json').then(com => {
+        this.com = com
       })
     })
 
@@ -61,13 +68,13 @@ describe("7318_Create commission successfully when input value into required fie
 
         var name = cy.common.RandonString(10)
         el_commission.input_text_into_commission_name(name)
-        const number = cy.common.randNumber(12)
-        el_commission.input_text_into_txt_max_amount_money(number)
+        //const number = cy.common.randNumber(12)
+        el_commission.input_text_into_txt_max_amount_money(this.com.TC7318.number)
         el_commission.click_on_save_button()
         el_commission.verify_message_notify_sucessful(name)
         el_commission.input_text_into_search_textbox(name)
         const todaysDate = Cypress.moment().format('DD-MM-YYYY')
-        el_commission.verify_commission_has_been_added_on_data_grid("DDBH", name, "", "", number+" ₫", todaysDate, "", "Đang hoạt động")
+        el_commission.verify_commission_has_been_added_on_data_grid("DDBH", name, "", "", this.com.TC7318.number+" ₫", todaysDate, "", "Đang hoạt động")
     })
 })
 
@@ -80,6 +87,9 @@ describe("7333_Creat commission unsucessfully when inputting empty value into re
     beforeEach(function(){
         cy.fixture('LoginPage.json').then(logins => {
         this.logins = logins
+      })
+      cy.fixture('Commission.json').then(com => {
+        this.com = com
       })
     })
 
@@ -111,6 +121,9 @@ describe("7450_Create commission unsuccessfully when inputting empty value into 
         cy.fixture('LoginPage.json').then(logins => {
         this.logins = logins
       })
+      cy.fixture('Commission.json').then(com => {
+        this.com = com
+      })
     })
 
     it("Create commission unsuccessfully when inputting empty value into max amount text box", function(){
@@ -126,8 +139,8 @@ describe("7450_Create commission unsuccessfully when inputting empty value into 
 
         var name = cy.common.RandonString(10)
         el_commission.input_text_into_commission_name(name)
-        const number = cy.common.randNumber(12)
-        el_commission.input_text_into_txt_max_amount_money(number)
+        //const number = cy.common.randNumber(12)
+        el_commission.input_text_into_txt_max_amount_money(this.com.TC7450.number)
         el_commission.check_on_fixed_amount()
         el_commission.click_on_save_button()
         el_commission.verify_fixed_amount_validate_text_box("  Vui lòng nhập số tiền cố định")
@@ -145,6 +158,9 @@ describe("7325_Create commission successfully when checking on apply for the sal
         cy.fixture('LoginPage.json').then(logins => {
         this.logins = logins
       })
+      cy.fixture('Commission.json').then(com => {
+        this.com = com
+      })
     })
 
     it("Create commission successfully when checking on apply for the sale present", function(){
@@ -160,14 +176,14 @@ describe("7325_Create commission successfully when checking on apply for the sal
 
         var name = cy.common.RandonString(10)
         el_commission.input_text_into_commission_name(name)
-        const number = cy.common.randNumber(10)
-        el_commission.input_text_into_txt_max_amount_money(number)
+       // const number = cy.common.randNumber(10)
+        el_commission.input_text_into_txt_max_amount_money(this.com.TC7325.number)
         el_commission.check_on_chk_apply_for_sale_present()
         el_commission.click_on_save_button()
         el_commission.verify_message_notify_sucessful(name)
         el_commission.input_text_into_search_textbox(name)
         const todaysDate = Cypress.moment().format('DD-MM-YYYY')
-        el_commission.verify_commission_has_been_added_on_data_grid("DDBH", name, "", "", number+" ₫", todaysDate, "", "Đang hoạt động")
+        el_commission.verify_commission_has_been_added_on_data_grid("DDBH", name, "", "", this.com.TC7325.number+" ₫", todaysDate, "", "Đang hoạt động")
     })
 
 })

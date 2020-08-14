@@ -1,0 +1,16 @@
+{
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "mochawesome-report",
+    "quite": true,
+    "overwrite": true,
+    "html": true,
+    "json": true
+  },
+  "viewportWidth": 1920,
+  "viewportHeight": 1200,
+  "testFiles": [
+    "TestSuites/Supplier.js"
+  ],
+  "projectId": "pncmf8"
+}
